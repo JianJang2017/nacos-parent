@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jianzhang.nacos</groupId>
+  <artifactId>nacos-parent</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+  <name>nacos-parent</name>
+  <description>nacos 练习父项目</description>
+  <modules>
+  <!-- springcloud nacos 父项目  -->
+  	<module>springcloud-nacos</module>
+  	<!-- dubbo nacos 父项目 -->
+  	<module>dubbo-nacos</module>
+  </modules>
+    <properties><java.version>1.8</java.version></properties>
+  <build>
+    <plugins>
+      <!-- define the project compile level -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
